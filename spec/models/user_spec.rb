@@ -20,6 +20,34 @@ describe User do
       it { should be_valid }
       
       
+      
+      describe "User pages" do
+
+        subject { page }
+
+        describe "signup page" do
+          before { visit signup_path }
+
+          it { should have_content('Sign up') }
+          it { should have_title(full_title('Sign up')) }
+        end
+      end
+      
+      
+      
+      describe "profile page" do
+         let(:user) { FactoryGirl.create(:user) }
+         before { visit user_path(user) }
+
+         it { should have_content(user.name) }
+         it { should have_title(user.name) }
+       end
+      
+      
+      
+      
+      
+      
       describe "with a password that's too short" do
           before { @user.password = @user.password_confirmation = "a" * 5 }
           it { should be_invalid }

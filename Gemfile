@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'sass-rails'
 gem 'sprockets', '=2.11.0' #force for now That will fix it for now
 gem 'bcrypt-ruby'  #哈希不可逆加密
+gem 'factory_girl_rails', '4.2.1' #预构件，生成测试数据。
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
