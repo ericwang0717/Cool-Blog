@@ -1,3 +1,6 @@
+
+
+
 @import "bootstrap";
 
 
@@ -6,11 +9,34 @@
 $grayMediumLight: #eaeaea;
 $blue:#0088cc;
 
+$navbar-default-bg: #312312;
+$light-orange: #ff8c00;
+$navbar-default-color: $light-orange;
+
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+
+
+
+.navbar-inner {
+    background-color: #fff;
+    background-repeat: repeat-x;
+    border: 1px solid white;
+    border-radius: 4px 4px 4px 4px;
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar {
+	height:100px;
+}
+
 
 
 
